@@ -1,0 +1,4 @@
+str1 = input("please enter your string:")
+a=input("please enter specific character:")
+print(str1.rsplit(a, 1)[0])
+
