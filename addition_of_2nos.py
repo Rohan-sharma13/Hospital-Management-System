@@ -1,0 +1,7 @@
+a= input("Enter first no:")
+a= int(a)
+b= input("Enter second no:")
+b= int(b)
+print("addition :",a+b,"Modulas of a:",a%2,"Modulus of b:",b%2)
+print("wheather  A greater than  B:",(a>b))
+print("wheather  B greater than A: ",(a<b))

@@ -1,0 +1,8 @@
+a=int(input("enter first interger:"))
+b=int(input("enter secont interger:"))
+print(a>b)
+print(a<b)
+print(a==b)
+print(a!=b)
+print(a&b)
+print(a|b)
