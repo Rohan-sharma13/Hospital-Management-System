@@ -8,3 +8,7 @@ def f():
     print("After calling g:",x)
 f()
 print("x in main:",x)
+'''Output=
+Before calling g: 42
+After calling g: 42
+x in main: 43'''

@@ -9,3 +9,6 @@ def fun(x, y):
     print(a,b,x,y)
 fun(17,4)
 print(a,b,x,y)
+'''Output=
+42 17 4 17
+42 15 3 4'''

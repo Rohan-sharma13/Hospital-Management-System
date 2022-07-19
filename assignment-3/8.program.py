@@ -12,3 +12,10 @@ class MyClass():
 c = MyClass()
 c.add(3,3)
 c.mul(4,4)
+'''output=
+6
+300
+30
+16
+300
+200'''

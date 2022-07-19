@@ -15,3 +15,11 @@ g()
 print ('global : ',a)
 h()
 print ('global : ',a)
+'''Output=
+Inside g() :  10
+Inside h() :  30
+global :  30
+Inside f() :  30
+global :  30
+global :  30
+global :  30'''

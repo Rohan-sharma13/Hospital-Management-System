@@ -24,3 +24,5 @@ class Test :
 
 # call class method
 Test.class_method_1()
+'''Output=
+static method 1'''
