@@ -1,0 +1,22 @@
+l1,l2=[],[]
+a=int(input("Enter No elements of 1st set:"))
+b=int(input("Enter No elements of 2nt set:"))
+for i in range(0,a):
+    print("Element No",i+1,"of set-1:")
+    x=input()
+    l1.append(x)
+for i in range(0,b):
+    print("Element No",i+1,"of set-2:")
+    y=input()
+    l2.append(y)
+set1=set(l1)
+set2=set(l2)
+print("original Sets:")
+print("Set-1:",set1)
+print("Set-2:",set2)
+r1=set1.symmetric_difference(set2)
+print("\nSymmetric Difference of Set-1 and Set-2:\n",r1)
+r2=set1.difference(set2)
+print("\nDifference Between Set-1 - Set-2:\n",r2)
+r3=set2.difference(set1)
+print("\nDifference Between Set-2 - Set-1:\n",r3)
