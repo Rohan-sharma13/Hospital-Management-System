@@ -1,8 +1,26 @@
 from ssl import Options
 from tkinter import *
 from tkinter import ttk
+from tkinter import messagebox
+from mysql import connector
 import tkinter
 from tkinter.font import BOLD
+def database():
+    conn = connector.connect(
+        user='root',
+
+        password='root2001',
+
+        host='127.0.0.1',
+
+        port='3306',
+
+        database='data_base1')
+    mycursor=conn.cursor()
+    mycursor.execute("insert into details values(%s,%s,%s,%s,%s,%s)",
+    (entry_1.get(),entry_2.get(),entry_3.get(),entry_4.get(),c.get(),var1.get()))
+    messagebox.showinfo("info"," Data submitted Successfully")
+    conn.commit()
 root =Tk()
 root.geometry("500x500")
 root.title("Registration Form")
@@ -37,6 +55,6 @@ label_6.place(x=75,y=320)
 var1=IntVar()
 Radiobutton(root,text="Male",padx=5,variable=var1,value=1).place(x=235,y=320)
 Radiobutton(root,text="Female",padx=20,variable=var1,value=2).place(x=290,y=320)
-Button(root,text="Submit",width=20,bg="brown",fg="white").place(x=180,y=420)
+Button(root,text="Submit",width=20,bg="brown",fg="white",command=database).place(x=180,y=420)
 
 root.mainloop()
