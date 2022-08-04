@@ -28,7 +28,16 @@ class Hospital:
         dataframeRight=LabelFrame(dataframe,bd=10,relief=RIDGE,padx=20
         ,font=("arial",12,"bold"),text="PRESCRIPTION")
         dataframeRight.place(x=910,y=5,width=580,height=350 )
+      
+      # ************* BUTTON FRAME********************
+        Buttonframe=Frame(self.root,bd=15,relief=RIDGE)
+        Buttonframe.place(x=0,y=530,width=1530,height=70)
 
+      # ************* Details Frame*********************
+        detailframe=Frame(self.root,bd=15,relief=RIDGE)
+        detailframe.place(x=0,y=605,width=1530,height=170)
+
+      # ************* Left Frame Labels*******************
        
 root=Tk()
 obj=Hospital(root)
