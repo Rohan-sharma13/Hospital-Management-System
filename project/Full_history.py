@@ -1,6 +1,7 @@
 from tkinter import *
 from tkinter import ttk
 from tkinter.ttk import Labelframe
+
 from PIL import Image,ImageTk
 import mysql.connector
 import random
@@ -40,7 +41,7 @@ class History:
        labelframeleft.place(x=250,y=68,width=800,height=480)
        
        detail_table=Frame(labelframeleft,bd=2,relief=RIDGE)
-       detail_table.place(x=0,y=0,width=790,height=450)
+       detail_table.place(x=0,y=0,width=790,height=400)
 
        scroll_x=ttk.Scrollbar(detail_table,orient=HORIZONTAL)
        scroll_y=ttk.Scrollbar(detail_table,orient=VERTICAL)
@@ -49,6 +50,10 @@ class History:
        scroll_x.pack(side=BOTTOM,fill=X)
        scroll_y.pack(side=RIGHT,fill=Y)
 
+       
+       btn_close=Button(labelframeleft,text="CLOSE",bd=5,command=self.close,relief=RAISED,bg="black",fg="white",font=("arial",15,"bold"),cursor="hand2")
+       btn_close.place(x=330,y=410,width=100,height=30)
+   
        scroll_x.config(command=self.patient_detail.xview)
        scroll_y.config(command=self.patient_detail.yview)
        self.patient_detail.heading("Patient Id",text="Patient ID")
@@ -83,6 +88,9 @@ class History:
 
        self.patient_detail.pack(fill=BOTH,expand=1)
        self.fatch_data()
+   
+        
+        
 
     def fatch_data(self):
         conn=mysql.connector.connect(host="localhost",username="root",password="root2001",database="registeration_database")
@@ -95,6 +103,9 @@ class History:
                 self.patient_detail.insert("",END,values=i)
             conn.commit()
         conn.close()
+    def close(self):
+        self.root.destroy()
+    
 
               
 if __name__=="__main__":

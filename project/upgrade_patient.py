@@ -106,7 +106,7 @@ class Upgrade:
            
                     conn=mysql.connector.connect(host="localhost",username="root",password="root2001",database="registeration_database")
                     my_cursor=conn.cursor()
-                    my_cursor.execute("update  patient_data set Name=%s,Contact_No=%s,Age=%s,Gender=%s,Blood_Group=%s,Address=%s,Major_disease Before=%s where Patient_ID=%s",(
+                    my_cursor.execute("update  patient_data set Name=%s, Contact_No=%s, Age=%s, Gender=%s, Blood_Group=%s, Address=%s, Major_disease=%s where Patient_ID=%s",(
                        self.var_Name.get(),
                        self.var_contact.get(),
                        self.var_age.get(),

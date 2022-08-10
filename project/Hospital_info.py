@@ -46,9 +46,13 @@ class hospital_info:
        lblimg4.place(x=0,y=0,width=789,height=150)
 
        lbl_text=Label(labelframeleft,text="Hospital management system is a computer system \nthat helps manage the information \nrelated to health care and aids in the job \ncompletion of health care providers effectively.",font=("times new roman",25,"bold"),bg="lightblue")
-       lbl_text.place(x=0,y=170,width=789,height=250)
+       lbl_text.place(x=0,y=170,width=789,height=230)
 
+       btn_close=Button(labelframeleft,text="CLOSE",bd=5,command=self.close,relief=RAISED,bg="black",fg="white",font=("arial",15,"bold"),cursor="hand2")
+       btn_close.place(x=330,y=410,width=100,height=30)
 
+    def close(self):
+        self.root.destroy()
        
 
 if __name__=="__main__":
